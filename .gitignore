@@ -1,0 +1,6 @@
+/vn_sbert_deploy/phobert_base_mean_tokens_NLI_STS/similarity_evaluation_results.csv
+/ml/model/phobert_base_mean_tokens_NLI_STS/similarity_evaluation_results.csv
+/ml/model/phobert_base_mean_tokens_NLI_STS/
+.idea
+/ml/models/
+/ml/model/bpe/

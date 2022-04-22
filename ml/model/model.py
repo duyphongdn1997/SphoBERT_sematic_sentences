@@ -66,14 +66,14 @@ class Model(object):
         # convert graph to html and replace its id
         graph = fig.to_html(full_html=False, include_plotlyjs=False)
 
-        re_graph = r"Plotly\.newPlot\(\s*'(.*?)',.*?\)"
+        re_graph = r"Plotly\.newPlot\(\s*(.*?),.*?\)"
         groups_html = re.search(re_graph, graph, re.DOTALL)
         result = groups_html[0].replace(groups_html[1], 'plotly')
 
         return result
 
 
-model = Model('ml/model/phobert_base_mean_tokens_NLI_STS')
+model = Model('/home/phongdtd/phongdtd/SphoBERT_sematic_sentences/ml/model/phobert_base_mean_tokens_NLI_STS')
 
 
 def get_model():

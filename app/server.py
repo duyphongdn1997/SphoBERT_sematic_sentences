@@ -3,6 +3,8 @@ import sys
 import traceback
 
 from typing import Tuple, List
+
+import uvicorn as uvicorn
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.logger import logger
 from fastapi.templating import Jinja2Templates
@@ -113,3 +115,7 @@ def cluster(request: KmeansRequest, model: Model = Depends(get_model)):
             detail=traceback.format_exc(),
         )
     return result
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=5000)
